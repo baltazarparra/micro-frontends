@@ -1,20 +1,24 @@
-import React from "react";
-import { Box } from "@chakra-ui/react";
+import React from "react"
+import { Box } from "@chakra-ui/react"
+import { useProxy } from 'valtio'
 
-import BeverageCard from "./BeverageCard";
-import { MFE_BORDER } from "../constants";
+import BeverageCard from "./BeverageCard"
+import store from '../store'
+import { MFE_BORDER } from "../constants"
 
 const Taps = () => {
+  const { filteredTaps } = useProxy(store)
+
   return (
     <Box border={MFE_BORDER}>
-      {[].map((beverage) => (
+      {filteredTaps.map((beverage) => (
         <BeverageCard
           key={[beverage.producerName, beverage.beverageName].join("")}
           beverage={beverage}
         />
       ))}
     </Box>
-  );
-};
+  )
+}
 
-export default Taps;
+export default Taps
