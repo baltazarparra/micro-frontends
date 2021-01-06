@@ -1,12 +1,16 @@
 import React from "react";
 import { Box, Button, Text } from "@chakra-ui/react";
+import { useProxy } from 'valtio'
 
 import { MFE_BORDER } from "../constants";
+import store from '../store'
 
 const Cart = () => {
+  const { cart } = useProxy(store)
+
   return (
     <Box border={MFE_BORDER}>
-      {[].map((beverage) => (
+      {cart.map((beverage) => (
         <Box
           borderBottom="1px"
           borderBottomColor="gray.200"
