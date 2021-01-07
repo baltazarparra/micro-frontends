@@ -1,3 +1,3 @@
 # 🔬 Micro-frontends
 
-Study of Micro Front-ends
+Study of Micro Front-ends and Module Federation.
