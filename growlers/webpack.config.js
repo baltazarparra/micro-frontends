@@ -48,10 +48,15 @@ module.exports = {
 
   plugins: [
     new ModuleFederationPlugin({
-      name: "starter",
+      name: "growlers",
       filename: "remoteEntry.js",
       remotes: {},
-      exposes: {},
+      exposes: {
+        './Cart': './src/components/Cart',
+        './Search': './src/components/Search',
+        './Taps': './src/components/Taps',
+        './store': './src/store',
+      },
       shared: {
         ...deps,
         react: {

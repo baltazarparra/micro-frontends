@@ -29,7 +29,7 @@ const Cart = () => {
         </Box>
       ))}
       <Box>
-        <Button width="100%">Checkout</Button>
+        <Button width="100%" onClick={() => (store.cart = [])}>Checkout</Button>
       </Box>
     </Box>
   );
