@@ -8,11 +8,9 @@ Study of Micro Front-ends and Module Federation.
 git clone https://github.com/baltazarparra/micro-frontends.git
 cd growlers
 yarn
-yarn start
-// host in 8080
+yarn start // host in 8080
 cd ..
 cd host-react
 yarn
-yarn start
-// host in 8081
+yarn start // host in 8081
 ```
