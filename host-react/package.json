@@ -8,6 +8,7 @@
     "start:live": "webpack-dev-server --open --mode development --liveReload"
   },
   "license": "MIT",
+  "author": "",
   "devDependencies": {
     "@babel/core": "7.9.6",
     "@babel/plugin-transform-runtime": "^7.12.10",
